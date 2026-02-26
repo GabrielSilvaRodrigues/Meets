@@ -27,9 +27,15 @@
     },
     "extra": {
       "eas": {
-        "projectId": "057e15db-7fc7-4613-8ed0-30d3bd8cde40"
+        "projectId": "415fbfea-a3ad-4150-aa34-35b56bec0daf"
       }
     },
-    "owner": "gabrielsilvarodrigues"
+    "owner": "gabrielsilvarodrigues",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/415fbfea-a3ad-4150-aa34-35b56bec0daf"
+    }
   }
 }
