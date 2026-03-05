@@ -20,9 +20,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  align-self: stretch;
   flex-shrink: 0;
-  width: 393px;
-  height: 74px;
   position: relative;
   overflow: hidden;
 }
@@ -53,11 +52,11 @@
   padding: 0px 21px 0px 21px;
   display: flex;
   flex-direction: column;
-  gap: 0px;
+  gap: 2px;
   align-items: center;
   justify-content: flex-start;
+  align-self: stretch;
   flex-shrink: 0;
-  width: 393px;
   height: 739px;
   position: relative;
   overflow: hidden;
