@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     overflow: "hidden",
   },
 
-  backbutton: {
+  backButton: {
     flexShrink: 0,
     width: 44,
     height: 44,
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     aspectRatio: 179.47 / 44,
   },
 
-  helpbutton: {
+  helpButton: {
     flexShrink: 0,
     width: 40,
     height: 40,
@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
     position: "relative",
   },
 
-  campoimagem: {
+  imageField: {
     flexDirection: "column",
     gap: 33,
     alignItems: "center",
@@ -383,7 +383,7 @@ const styles = StyleSheet.create({
     width: 155,
   },
 
-  cancelarbotao5: {
+  cancelarBotao5: {
     flexShrink: 0,
     width: 16,
     height: 16,
@@ -391,7 +391,7 @@ const styles = StyleSheet.create({
     overflow: "visible",
   },
 
-  botaoacao: {
+  botaoAcao: {
     flexDirection: "column",
     gap: 10,
     alignItems: "center",
@@ -400,7 +400,7 @@ const styles = StyleSheet.create({
     position: "relative",
   },
 
-  botaocadastrar: {
+  botaoCadastrar: {
     flexShrink: 0,
     width: 250,
     height: 48,
@@ -408,7 +408,7 @@ const styles = StyleSheet.create({
     aspectRatio: 250 / 48,
   },
 
-  formatobotao: {
+  formatoBotao: {
     backgroundColor: "#af221f",
     borderRadius: 126,
     borderStyle: "solid",
@@ -423,7 +423,7 @@ const styles = StyleSheet.create({
     top: 0,
   },
 
-  cadastrartexto: {
+  cadastrarTexto: {
     color: "#ffffff",
     textAlign: "center",
     fontFamily: "NunitoSansBold",
@@ -444,14 +444,14 @@ const styles = StyleSheet.create({
     position: "relative",
   },
 
-  linkentrar: {
+  linkEntrar: {
     flexShrink: 0,
     width: 205.48,
     height: 86.59,
     position: "relative",
   },
 
-  linktexto: {
+  linkTexto: {
     color: "#af221f",
     textAlign: "center",
     fontFamily: "NunitoBold",

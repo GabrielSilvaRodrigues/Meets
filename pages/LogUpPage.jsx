@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Button, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, TextInput } from "react-native";
 import styles from "./logUpPageStyles";
 import { Image } from "expo-image";
 
@@ -7,91 +7,96 @@ const LogUpPage = ({ navigation }) => {
     return (
         <View style={styles.logupForm}>
             <View style={styles.navbar}>
-                <Image style={styles.backButton} source={{ uri: "back.svg" }} />
-                <Image style={styles.logo} source={{ uri: "logo0.svg" }} />
-                <Image style={styles.helpButton} source={{ uri: "help-button0.svg" }} />
+                <TouchableOpacity >
+                    <Image style={styles.backButton} source={require("../assets/back.svg")} />
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <Image style={styles.logo} source={require("../assets/logo.svg")} />
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <Image style={styles.helpButton} source={require("../assets/ajuda.svg")} />
+                </TouchableOpacity>
             </View>
-            <View style={styles.content}>
-                <View style={styles.title}>
-                    <Text style={styles.subtitle}>crie o seu perfil</Text>
+
+            <View style={styles.conteudo}>
+                <View style={styles.tituloconteudo}>
+                    <Text style={styles.subtitulotexto}>crie o seu perfil</Text>
                 </View>
-                <View style={styles.form}>
+
+                <View style={styles.formulariocadastrar}>
                     <View style={styles.imageField}>
-                        <Text style={styles.imageLabel}>Imagem:</Text>
-                        <Image style={styles.saveButton} source={{ uri: "button-save0.svg" }} />
-                        <Text style={styles.uploadLabel}>Upload</Text>
+                        <Text style={styles.imagemtexto}>Imagem:</Text>
+                        <Image style={styles.buttonsave} source={require("../assets/arquivo.svg")} />
+                        <Text style={styles.nometexto}>Upload</Text>
                     </View>
-                    <View style={styles.nameField}>
-                        <Text style={styles.nameLabel}>Nome:</Text>
-                        <View style={styles.nameInput}>
-                            <Text style={styles.nameText}>FirstName LastName</Text>
-                            <Image style={styles.cancelButton} source={{ uri: "cancelar-botao0.svg" }} />
-                        </View>
-                    </View>
-                    <View style={styles.emailField}>
-                        <Text style={styles.emailLabel}>E-mail:</Text>
-                        <View style={styles.emailInput}>
-                            <Text style={styles.emailText}>exemplo@escola.gov.br</Text>
-                            <Image style={styles.cancelButton} source={{ uri: "cancelar-botao1.svg" }} />
-                        </View>
-                    </View>
-                    <View style={styles.passwordField}>
-                        <Text style={styles.passwordLabel}>Senha:</Text>
-                        <View style={styles.passwordInput}>
-                            <Text style={styles.passwordText}>***********</Text>
-                            <Image style={styles.cancelButton} source={{ uri: "cancelar-botao2.svg" }} />
-                        </View>
-                    </View>
-                    <View style={styles.passwordField}>
-                        <Text style={styles.passwordLabel}>Confirmar Senha:</Text>
-                        <View style={styles.passwordInput}>
-                            <Text style={styles.passwordText}>***********</Text>
-                            <Image style={styles.cancelButton} source={{ uri: "cancelarBotao.svg" }} />
-                        </View>
-                    </View>
-                    <View style={styles.passwordField}>
-                        <Text style={styles.passwordLabel}>Confirmar Senha:</Text>
-                        <View style={styles.passwordInput}>
-                            <Text style={styles.passwordText}>***********</Text>
-                            <Image style={styles.cancelButton} source={{ uri: "cancelar-botao3.svg" }} />
-                        </View>
-                    </View>
-                    <View style={styles.passwordField}>
-                        <Text style={styles.passwordLabel}>Confirmar Senha:</Text>
-                        <View style={styles.passwordInput}>
-                            <Text style={styles.passwordText}>***********</Text>
-                            <Image style={styles.cancelButton} source={{ uri: "cancelar-botao4.svg" }} />
-                        </View>
-                    </View>
-                    <View style={styles.cepField}>
-                        <Text style={styles.cepLabel}>Código Postal:</Text>
-                        <View style={styles.cepInput}>
-                            <Text style={styles.cepText}>01234-567</Text>
-                            <Image style={styles.cancelButton} source={{ uri: "cancelar-botao5.svg" }} />
-                        </View>
-                    </View>
-                    <View style={styles.submitButton}>
-                        <Text style={styles.submitButtonText}>Cadastrar</Text>
-                    </View>
-                <View style={styles.adicionais}>
-                    <View style={styles.linkEntrar}>
-                        <TouchableOpacity onPress={() => navigation.navigate('LogIn')}>
-                            <Text style={styles.linkTexto}>Já possui conta?</Text>
+
+                    <View style={styles.camponome}>
+                        <Text style={styles.nometexto2}>Nome:</Text>
+                        <TextInput style={styles.nomeinput} placeholder="Primeiro Nome Ultimo Nome" />
+                        <TouchableOpacity>
+                            <Image style={styles.cancelarbotao} source={require("../assets/cancelarBotao.svg")} />
                         </TouchableOpacity>
                     </View>
-                    <View style={styles.oauth2}>
-                        <View style={styles.botaoMicrosoft}>
-                            <Image style={styles.microsoftIcon} source={{ uri: "microsoft.png" }} />
+
+                    <View style={styles.campoemail}>
+                        <Text style={styles.emailtexto}>E-mail:</Text>
+                        <View style={styles.emailinput}>
+                            <Text style={styles.emailtexto2}>exemplo@escola.gov.br</Text>
+                            <Image style={styles.cancelarbotao} source={require("../assets/cancelarBotao.svg")} />
                         </View>
-                        <View style={styles.botaoGoogle}>
-                            <Image style={styles.googleIcon} source={{ uri: "google.png" }} />
+                    </View>
+
+                    <View style={styles.camposenha}>
+                        <Text style={styles.senhatexto}>Senha:</Text>
+                        <View style={styles.senhainput}>
+                            <Text style={styles.senhatexto2}>***********</Text>
+                            <Image style={styles.cancelarbotao} source={require("../assets/cancelarBotao.svg")} />
+                        </View>
+                    </View>
+
+                    <View style={styles.campoconfirmar}>
+                        <Text style={styles.senhatexto3}>Confirmar Senha:</Text>
+                        <View style={styles.senhainput}>
+                            <Text style={styles.senhatexto2}>***********</Text>
+                            <Image style={styles.cancelarbotao} source={require("../assets/cancelarBotao.svg")} />
+                        </View>
+                    </View>
+
+                    <View style={styles.campocep}>
+                        <Text style={styles.senhatexto4}>Código Postal:</Text>
+                        <View style={styles.senhainput}>
+                            <Text style={styles.senhatexto2}>01234-567</Text>
+                            <Image style={styles.cancelarbotao} source={require("../assets/cancelarBotao.svg")} />
+                        </View>
+                    </View>
+
+                    <View style={styles.botaoAcao}>
+                        <TouchableOpacity style={styles.botaoCadastrar}>
+                            <View style={styles.formatoBotao} />
+                            <Text style={styles.cadastrarTexto}>Cadastrar</Text>
+                        </TouchableOpacity>
+                    </View>
+
+                    <View style={styles.adicionais}>
+                        <View style={styles.linkEntrar}>
+                            <TouchableOpacity onPress={() => navigation.navigate("LogIn")}>
+                                <Text style={styles.linkTexto}>Já possui conta?</Text>
+                            </TouchableOpacity>
+                        </View>
+
+                        <View style={styles.oauth2}>
+                            <View style={styles.botaomicrosoft}>
+                                <Image style={styles.microsofticone} source={require("../assets/microsoft.png")} />
+                            </View>
+                            <View style={styles.botaogoogle}>
+                                <Image style={styles.googleicone} source={require("../assets/google.png")} />
+                            </View>
                         </View>
                     </View>
                 </View>
             </View>
         </View>
-    </View>
     );
-}
+};
 
 export default LogUpPage;
