@@ -1,28 +1,35 @@
 import React from "react";
-import { View, Text, TouchableOpacity } from "react-native";
-import styles from "./introductionPageStyles";
+import { View, Text } from "react-native";
 import { Image } from "expo-image";
+import ButtonDefault from "../components/button/ButtonDefault"; // Certifique-se que o caminho está correto
+import styles from "./introductionPageStyles";
 
-const IntroductionPage = ({ navigation }) => {
+const IntroductionPage = () => {
     return (
         <View style={styles.main}>
-          <View style={styles.elementoEstatico}>
-            <Image source={require("../assets/logo.svg")} style={styles.logoImagem}/>
-            <Text style={styles.suptituloTexto}>Sua rede social de eventos acadêmicos!</Text>
-          </View>
-          <View style={styles.elementoAcao}>
-            <View style={styles.botaoEntrar}>
-                <TouchableOpacity style={styles.formatoBotao} onPress={()=>navigation.navigate('LogIn')}>
-                    <Text style={styles.entrarTexto}>Entrar</Text>
-                </TouchableOpacity>
+            <View style={styles.staticContent}>
+                <Image 
+                    source={require("../assets/logo.svg")} 
+                    style={styles.logoImage}
+                    contentFit="contain" 
+                />
+                <Text style={styles.subtitleText}>
+                    Sua rede social de eventos acadêmicos!
+                </Text>
             </View>
-            <Text style={styles.ouTexto}>ou</Text>
-            <View style={styles.botaoCadastrar}>
-                <TouchableOpacity style={styles.formatoBotao2} onPress={()=>navigation.navigate('LogUp')}>
-                    <Text style={styles.cadastrarTexto}>Cadastrar-se</Text>
-                </TouchableOpacity>
+            <View style={styles.actionArea}>
+                <ButtonDefault 
+                    label="Entrar" 
+                    goTo="LogIn" 
+                />
+
+                <Text style={styles.orText}>ou</Text>
+
+                <ButtonDefault 
+                    label="Cadastrar-se" 
+                    goTo="LogUp" 
+                />
             </View>
-          </View>
         </View>
     );
 }

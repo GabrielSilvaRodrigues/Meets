@@ -4,6 +4,7 @@ import { Image } from "expo-image";
 import { useNavigation } from "@react-navigation/native";
 import InputDefault from "../input/InputDefault";
 import styles from "./formLogUpStyles";
+import Adicionals from "./adicionals/Adicionals";
 
 const FormLogUp = () => {
     const navigation = useNavigation();
@@ -73,19 +74,11 @@ const FormLogUp = () => {
             </View>
             <View style={styles.adicionals}>
                 <View style={styles.linkLogIn}>
-                    <TouchableOpacity onPress={() => navigation.navigate("LogIn")}>
+                    <TouchableOpacity style={styles.LinkForm} onPress={() => navigation.navigate("LogIn")}>
                         <Text style={styles.linkText}>Já possui conta?</Text>
                     </TouchableOpacity>
                 </View>
-
-                <View style={styles.fieldOauth2}>
-                    <TouchableOpacity style={styles.microsoftButton}>
-                        <Image style={styles.microsoftImage} source={require("../../assets/microsoft.png")} />
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.botaogoogle}>
-                        <Image style={styles.googleImage} source={require("../../assets/google.png")} />
-                    </TouchableOpacity>
-                </View>
+                <Adicionals/>
             </View>
         </View>
     );

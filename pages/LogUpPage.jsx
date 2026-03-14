@@ -12,7 +12,7 @@ const LogUpPage = ({navigation}) => {
             <ScrollView style={styles.mainScroll}>
                 <View style={styles.form}>
                     <View style={styles.titleForm}>
-                        <Text style={styles.textTitle}>crie o seu perfil</Text>
+                        <Text style={styles.textTitle}>Crie o seu perfil</Text>
                     </View>
                     <FormLogUp/>
                 </View>

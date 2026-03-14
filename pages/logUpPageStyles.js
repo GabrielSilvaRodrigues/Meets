@@ -9,19 +9,21 @@ const styles = StyleSheet.create({
       flex: 1,                    // Permite que o scroll ocupe o resto da tela
   },
   form: {
-      paddingHorizontal: 20,      // Respiro lateral do formulário
-      paddingBottom: 40,          // Espaço extra no fim para não colar no rodapé
+      width: '100%',             // Garante que o conteúdo use a largura disponível
+      paddingHorizontal: 20,
+      paddingBottom: 40,
   },
   titleForm: {
-      marginTop: 30,              // Distância da Navbar
-      marginBottom: 20,           // Distância para o início do Form
-      alignItems: 'flex-start',   // Alinha o título à esquerda (HUG horizontal)
+      marginTop: 30,
+      marginBottom: 20,
+      alignItems: 'center',      // <--- CENTRALIZA O HUG (O contêiner do texto)
+      justifyContent: 'center',
   },
   textTitle: {
-      fontSize: 28,               // Tamanho de destaque
+      fontSize: 28,
       fontWeight: 'bold',
-      color: '#9c2222',           // Mantendo sua paleta de cores
-      textTransform: 'capitalize', // Transforma "crie o seu perfil"
+      color: '#9c2222',
+      textAlign: 'center',       // <--- CENTRALIZA O TEXTO (Caso quebre linha)
   }
 });
 
